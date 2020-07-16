@@ -95,8 +95,7 @@ class TeleportCommand extends VanillaCommand{
 				}
 
 				$subject->teleport($targetPlayer->getLocation());
-				Command::broadcastCommandMessage($sender, new TranslationContainer("commands.tp.success", [$subject->getName(), $targetPlayer->getName()]));
-
+				
 				return true;
 			case 3:
 			case 5:
@@ -114,13 +113,7 @@ class TeleportCommand extends VanillaCommand{
 				$z = $this->getRelativeDouble($base->z, $sender, $targetArgs[2]);
 				$targetLocation = new Location($x, $y, $z, $yaw, $pitch, $base->getLevelNonNull());
 
-				$subject->teleport($targetLocation);
-				Command::broadcastCommandMessage($sender, new TranslationContainer("commands.tp.success.coordinates", [
-					$subject->getName(),
-					round($targetLocation->x, 2),
-					round($targetLocation->y, 2),
-					round($targetLocation->z, 2)
-				]));
+				$subject->teleport($targetLocation);			
 				return true;
 			default:
 				throw new AssumptionFailedError("This branch should be unreachable (for now)");
