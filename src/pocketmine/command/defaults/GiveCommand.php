@@ -93,12 +93,7 @@ class GiveCommand extends VanillaCommand{
 
 		//TODO: overflow
 		$player->getInventory()->addItem(clone $item);
-
-		Command::broadcastCommandMessage($sender, new TranslationContainer("%commands.give.success", [
-			$item->getName() . " (" . $item->getId() . ":" . $item->getDamage() . ")",
-			(string) $item->getCount(),
-			$player->getName()
-		]));
+	
 		return true;
 	}
 }
