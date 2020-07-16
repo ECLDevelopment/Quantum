@@ -32,7 +32,7 @@ if(defined('pocketmine\_VERSION_INFO_INCLUDED')){
 }
 const _VERSION_INFO_INCLUDED = true;
 
-const NAME = "PocketMine-MP";
-const BASE_VERSION = "3.14.3";
-const IS_DEVELOPMENT_BUILD = true;
+const NAME = "Quantum";
+const BASE_VERSION = "3.14.5";
+const IS_DEVELOPMENT_BUILD = false;
 const BUILD_NUMBER = 0;
